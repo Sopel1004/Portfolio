@@ -214,8 +214,7 @@ h2 {
           animation: upDown 2s infinite;
 }
 
-#home h1
-span {
+#home h1 span {
   font-size: 1rem;
   color: #d48a00;
 }
