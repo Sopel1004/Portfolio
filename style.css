@@ -188,7 +188,7 @@ h2 {
   width: 100%;
   padding: 10px;
   height: 100vh;
-  background-image: url(full-bloom.png);
+  background-image: url(./full-bloom.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
