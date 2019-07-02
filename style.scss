@@ -83,20 +83,7 @@ h2{
   color: #ff00a4;
 }
 
-header{
-    width: 100%;
-    height: $btnHeight+10;
-    //display: flex;
-    //justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    background-color: #fff;
-    opacity: 0;
-    //padding: 5px;
-    transition: opacity 0.5s ease;
-}
+
 
 .menu{
     width: 100%;
@@ -105,8 +92,9 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 110vh;
+    height: 120vh;
     position: absolute;
+    top: 0;
     background-color: #fff;
     transform: translate(-100%,0);
     transition: transform 0.5s ease;
@@ -115,7 +103,7 @@ header{
     &.active{
       transform: none;
       position: fixed;
-      top: 0;
+      
     }
 
     & .menuElement{
@@ -128,6 +116,40 @@ header{
       color: #000;
     }
 
+}
+
+.colorChanger{
+  width: 60px;
+  height: 30px;
+  background-color: #c7c7c7;
+  border: 2px solid #a0a0a0;
+  border-radius: 15px;
+  position: absolute;
+  top: 50px;
+  left: 80%;
+  outline: none;
+  transition: border .5s ease, background .5s ease;
+  z-index: 10;
+
+  & span{
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 11px;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    transition: transform .5s ease, background .5s ease;
+  }
+
+  &.active {
+    border-color: #ff00a4;
+    background-color: transparent;
+    & span{
+      transform: translate(30px,0);
+      background-color: #ff00a4;
+    }
+  }
 }
 
 #home{
@@ -216,6 +238,7 @@ section{
     width: 90%;
     height: 20%;
     margin: 5px 0;
+    border-radius: 5px;
   }
 }
 
@@ -223,12 +246,14 @@ section{
   & .container{
     
     background: linear-gradient(180deg, #fc936a 0%, #ff82dd 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     
 
-    & > div{
+    & div{
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
       margin: 10px 0;
     }
@@ -290,6 +315,11 @@ footer{
     & h1{
       font-size: 2rem;
       color: #faa300;
+
+      & span{
+        font-size: 1.5rem;
+        color: #d48a00;
+      }
     }
   }
 
@@ -319,7 +349,6 @@ footer{
     .container{
       justify-content: space-around;
       .portfolio-element{
-
         width: 40%;
         height: 10%;
       }
@@ -358,6 +387,9 @@ footer{
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     
     //CSS
+    section{
+      min-height: 100vh;
+    }
     
   }
   
@@ -369,7 +401,15 @@ footer{
   @media (min-width: 481px) and (max-width: 767px) {
     
     //CSS
-    
+    section{
+      min-height: 100vh;
+    }
+
+    #home{
+      & .arrowDown{
+        top: 80%;
+      }
+    }
   }
   
   /* 
