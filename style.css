@@ -188,7 +188,7 @@ h2 {
   width: 100%;
   padding: 10px;
   height: 100vh;
-  background-image: url(./full-bloom.png);
+  background-image: url(full-bloom.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,6 +212,12 @@ h2 {
   left: calc(50% - 24px);
   -webkit-animation: upDown 2s infinite;
           animation: upDown 2s infinite;
+}
+
+#home h1
+span {
+  font-size: 1rem;
+  color: #d48a00;
 }
 
 @-webkit-keyframes upDown {

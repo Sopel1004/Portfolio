@@ -156,7 +156,7 @@ h2{
   width: 100%;
   padding: 10px;
   height: 100vh;
-  background-image: url(/full-bloom.png);
+  background-image: url(full-bloom.png);
   display: flex;
   align-items: center;
   border-bottom-left-radius: 10px;
@@ -172,6 +172,12 @@ h2{
     top: 90%;
     left: calc(50% - 24px);
     animation: upDown 2s infinite ;
+  }
+
+  & h1 
+    span{
+    font-size: 1rem;
+    color: #d48a00;
   }
 }
 
@@ -315,7 +321,7 @@ footer{
     & h1{
       font-size: 2rem;
       color: #faa300;
-
+      
       & span{
         font-size: 1.5rem;
         color: #d48a00;
